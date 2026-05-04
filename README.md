@@ -174,6 +174,22 @@ After running the database seed, you can log in using:
 | Casablanca | 3 | 3 |
 | Tangier | 2 | 2 |
 
+## 🧪 Testing Setup
+
+The backend API is configured with **Jest** and **Supertest** for endpoint testing.
+To run the testing suite:
+```bash
+cd UrbanMove-Backend
+npm test
+```
+
+## 🗺️ Future Roadmap
+
+While this MVP is production-ready, future architectural improvements include:
+- **TypeScript Migration:** Gradual migration to TypeScript for enhanced type safety and scalability.
+- **E2E Testing:** Implementation of end-to-end tests using Detox (Mobile) and Cypress (Web Dashboard).
+- **i18n Support:** Full internationalization to support dynamic switching between French, English, and Arabic.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
