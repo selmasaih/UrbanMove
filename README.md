@@ -1,5 +1,11 @@
 # 🚗 UrbanMove - Smart Urban Mobility
 
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=for-the-badge)
+
 <p align="center">
   <img src="./screenshot.png" alt="UrbanMove Screenshot" width="300"/>
 </p>
@@ -52,7 +58,7 @@ A smart urban mobility mobile application designed to improve traffic flow and p
 ## 📁 Project Structure
 
 ```text
-frproject/
+UrbanMove-Workspace/
 ├── UrbanMove/                 # React Native Mobile Application
 │   ├── src/
 │   │   ├── screens/          # App screens
@@ -170,7 +176,7 @@ After running the database seed, you can log in using:
 
 ## 📄 License
 
-This project was developed for educational purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
