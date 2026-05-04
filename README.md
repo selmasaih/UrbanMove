@@ -69,7 +69,7 @@ frproject/
     │   ├── routes/           # Express routes
     │   ├── middleware/       # Custom middlewares
     │   └── seeds/            # Demo data seeders
-    ├── .env
+    ├── .env.example      # Environment variables template
     └── package.json
 ```
 
