@@ -5,6 +5,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=for-the-badge)
+![CI](https://github.com/selmasaih/UrbanMove/actions/workflows/backend-ci.yml/badge.svg?style=for-the-badge)
 
 <p align="center">
   <img src="./screenshot.png" alt="UrbanMove Screenshot" width="300"/>
