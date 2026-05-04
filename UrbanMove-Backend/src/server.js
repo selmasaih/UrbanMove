@@ -220,6 +220,8 @@ const startServer = async () => {
   process.on('SIGINT', () => shutdown('SIGINT'));
 };
 
-startServer();
+if (require.main === module) {
+  startServer();
+}
 
 module.exports = app;
