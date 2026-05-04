@@ -1,9 +1,9 @@
 // Configuration de l'API
 const DEV_API_URL = 'http://172.20.10.13:5001/api'; // IP du PC via hotspot
 const ANDROID_API_URL = 'http://10.0.2.2:5001/api'; // Pour émulateur Android
-const PROD_API_URL = 'https://urbanmove-api.onrender.com/api';
+const PROD_API_URL = 'https://urbanmove-production-3c94.up.railway.app/api';
 
-// En dev (Expo Go) → utilise l'IP locale, en production (APK) → utilise Render
+// En dev (Expo Go) → utilise l'IP locale, en production (APK) → utilise Railway
 export const API_URL = __DEV__ ? DEV_API_URL : PROD_API_URL;
 
 // Points de terminaison API
