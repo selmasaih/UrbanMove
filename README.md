@@ -1,171 +1,177 @@
 # 🚗 UrbanMove - Smart Urban Mobility
 
-Application mobile de mobilité urbaine intelligente pour les villes marocaines (Rabat, Casablanca, Tanger).
+<p align="center">
+  <img src="./screenshot.png" alt="UrbanMove Screenshot" width="300"/>
+</p>
 
-## 📱 Fonctionnalités
+> **Note:** This repository is documented in English for professional visibility, but the mobile application's user interface is currently in **French**.
+
+A smart urban mobility mobile application designed to improve traffic flow and parking management in major Moroccan cities (Rabat, Casablanca, Tangier).
+
+## 📱 Features
 
 ### Smart Parking
-- Localisation des parkings à proximité
-- Disponibilité en temps réel
-- Réservation et paiement en ligne
-- Navigation vers le parking
+- Find nearby parking lots on the map
+- Real-time availability tracking
+- Online reservation and secure payment
+- Turn-by-turn navigation to the parking spot
 
 ### Smart Navigation
-- Calcul d'itinéraires optimisés
-- Intégration des feux tricolores intelligents
-- Économie de temps et de CO2
-- Instructions turn-by-turn
+- Optimized route calculation
+- Smart traffic light integration
+- Time and CO2 emission savings
+- Turn-by-turn driving instructions
 
-### Alertes en Temps Réel
-- Accidents et incidents
-- Travaux routiers
-- Événements
-- État du trafic
+### Real-time Alerts
+- Accidents and incidents reporting
+- Roadwork notifications
+- Special events tracking
+- Live traffic conditions
 
-### Profil Utilisateur
-- Gestion des véhicules
-- Portefeuille électronique
-- Historique des réservations
-- Statistiques personnelles
+### User Profile
+- Personal vehicle management
+- Electronic wallet for payments
+- Reservation history
+- Personal mobility statistics
 
-## 🛠️ Stack Technique
+## 🛠️ Technical Stack
 
-### Frontend (Mobile)
+### Frontend (Mobile App)
 - **React Native** + **Expo SDK 50**
 - React Navigation 6.x
 - react-native-maps
 - expo-location
 - Axios
 
-### Backend (API)
+### Backend (REST API)
 - **Node.js** + **Express 4.x**
 - **MongoDB** + **Mongoose 8.x**
 - JWT Authentication
 - Geospatial Queries
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
-```
+```text
 frproject/
-├── UrbanMove/                 # Application mobile React Native
+├── UrbanMove/                 # React Native Mobile Application
 │   ├── src/
-│   │   ├── screens/          # Écrans de l'application
-│   │   ├── navigation/       # Configuration de la navigation
-│   │   ├── services/         # Services API
+│   │   ├── screens/          # App screens
+│   │   ├── navigation/       # Navigation configuration
+│   │   ├── services/         # API services
 │   │   ├── context/          # Context providers
-│   │   └── constants/        # Thème et configuration
+│   │   └── constants/        # Theme & configs
 │   ├── App.js
 │   └── package.json
 │
-└── UrbanMove-Backend/         # API REST Node.js
+└── UrbanMove-Backend/         # Node.js REST API
     ├── src/
-    │   ├── models/           # Modèles Mongoose
-    │   ├── routes/           # Routes Express
-    │   ├── middleware/       # Middlewares
-    │   └── seeds/            # Données de démonstration
+    │   ├── models/           # Mongoose models
+    │   ├── routes/           # Express routes
+    │   ├── middleware/       # Custom middlewares
+    │   └── seeds/            # Demo data seeders
     ├── .env
     └── package.json
 ```
 
-## 🚀 Installation
+## 🚀 Installation & Setup
 
-### Prérequis
+### Prerequisites
 - Node.js 18+ 
-- MongoDB (local ou Atlas)
+- MongoDB (Local or Atlas)
 - Expo CLI (`npm install -g expo-cli`)
 
-### Backend
+### Backend Setup
 
 ```bash
-# Naviguer vers le dossier backend
+# Navigate to the backend directory
 cd UrbanMove-Backend
 
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Configurer les variables d'environnement
-# Éditer le fichier .env avec vos paramètres
+# Configure environment variables
+# Edit the .env file with your specific configurations
 
-# Lancer MongoDB (si local)
+# Start MongoDB (if using local instance)
 mongod
 
-# Peupler la base de données (optionnel)
+# Seed the database with demo data (Optional)
 npm run seed
 
-# Démarrer le serveur
+# Start the server
 npm run dev
 ```
 
-Le serveur démarre sur `http://localhost:5000`
+The server will start on `http://localhost:5000`
 
-### Frontend
+### Frontend Setup
 
 ```bash
-# Naviguer vers le dossier frontend
+# Navigate to the frontend directory
 cd UrbanMove
 
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Démarrer Expo
+# Start Expo development server
 npx expo start
 ```
 
-Scanner le QR code avec l'app Expo Go sur votre téléphone.
+Scan the QR code with the Expo Go app on your phone to launch the app.
 
 ## 📡 API Endpoints
 
-### Authentification
-- `POST /api/auth/register` - Inscription
-- `POST /api/auth/login` - Connexion
-- `GET /api/auth/profile` - Profil utilisateur
-- `POST /api/auth/logout` - Déconnexion
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+- `GET /api/auth/profile` - Get user profile
+- `POST /api/auth/logout` - User logout
 
-### Parkings
-- `GET /api/parking` - Liste des parkings
-- `GET /api/parking/nearby?lat=&lng=` - Parkings à proximité
-- `GET /api/parking/:id` - Détail d'un parking
-- `POST /api/parking/:id/reserve` - Réserver une place
-- `GET /api/parking/reservations/my` - Mes réservations
+### Parking
+- `GET /api/parking` - List all parking lots
+- `GET /api/parking/nearby?lat=&lng=` - Find nearby parking
+- `GET /api/parking/:id` - Get parking details
+- `POST /api/parking/:id/reserve` - Reserve a spot
+- `GET /api/parking/reservations/my` - My reservations
 
 ### Navigation
-- `POST /api/navigation/route` - Calculer un itinéraire
-- `GET /api/navigation/traffic` - État du trafic
-- `GET /api/navigation/smart-lights` - Feux intelligents
+- `POST /api/navigation/route` - Calculate route
+- `GET /api/navigation/traffic` - Traffic status
+- `GET /api/navigation/smart-lights` - Smart traffic lights
 
-### Alertes
-- `GET /api/alerts` - Liste des alertes
-- `GET /api/alerts/nearby?lat=&lng=` - Alertes à proximité
-- `POST /api/alerts` - Signaler une alerte
-- `PUT /api/alerts/:id/confirm` - Confirmer une alerte
+### Alerts
+- `GET /api/alerts` - List all alerts
+- `GET /api/alerts/nearby?lat=&lng=` - Nearby alerts
+- `POST /api/alerts` - Report an alert
+- `PUT /api/alerts/:id/confirm` - Confirm an alert
 
-### Utilisateur
-- `GET /api/user/profile` - Profil complet
-- `PUT /api/user/profile` - Modifier le profil
-- `GET /api/user/vehicles` - Mes véhicules
-- `POST /api/user/vehicles` - Ajouter un véhicule
-- `GET /api/user/wallet` - Mon portefeuille
-- `POST /api/user/wallet/topup` - Recharger
+### User
+- `GET /api/user/profile` - Full profile details
+- `PUT /api/user/profile` - Update profile
+- `GET /api/user/vehicles` - My vehicles
+- `POST /api/user/vehicles` - Add a vehicle
+- `GET /api/user/wallet` - My wallet balance
+- `POST /api/user/wallet/topup` - Top up wallet
 
-## 🔐 Identifiants de Démonstration
+## 🔐 Demo Credentials
 
-Après avoir exécuté le seed :
+After running the database seed, you can log in using:
 
 - **Email**: demo@urbanmove.ma
-- **Mot de passe**: demo123456
+- **Password**: demo123456
 
-## 🏙️ Villes Supportées
+## 🏙️ Supported Cities
 
-| Ville | Parkings | Feux Intelligents |
+| City | Parking Lots | Smart Traffic Lights |
 |-------|----------|-------------------|
 | Rabat | 3 | 3 |
 | Casablanca | 3 | 3 |
-| Tanger | 2 | 2 |
+| Tangier | 2 | 2 |
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est développé dans un cadre éducatif.
+This project was developed for educational purposes.
 
 ---
 
-**UrbanMove** - Simplifier la mobilité urbaine au Maroc 🇲🇦
+**UrbanMove** - Simplifying urban mobility in Morocco 🇲🇦
