@@ -14,6 +14,13 @@
 
 A smart urban mobility mobile application designed to improve traffic flow and parking management in major Moroccan cities (Rabat, Casablanca, Tangier).
 
+## 📥 Download the App (Android)
+
+You can install and test the production-ready Android application directly on your phone:
+1. Go to the [**Releases Tab**](https://github.com/selmasaih/UrbanMove/releases).
+2. Download the `UrbanMove-v1.0.0.apk` file to your Android device.
+3. Install the APK and launch the app (Backend is fully connected to the cloud).
+
 ## 📱 Features
 
 ### Smart Parking
